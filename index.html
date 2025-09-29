@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATS Monitoring Dashboard</title>
+  <link rel="stylesheet" href="SIH2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AUTOMATIC TRANSFER SWITCH MONITORING</h1>
+    </header>
+
+    <div id="ats-status" class="status-bar grid-mode">
+      ATS Switch is in: Grid Mode
+    </div>
+
+    <main class="dashboard">
+      <div class="column-left">
+        <div class="card battery-compartment">
+          <div class="battery-icon">
+            <div id="battery-level" class="battery-level"></div>
+          </div>
+          <p id="battery-status" class="card-title">Battery Status: Charging</p>
+          <p id="battery-percentage" class="card-value">--%</p>
+        </div>
+      </div>
+
+      <div class="column-right">
+        <div class="card-group">
+          <div class="card small-card">
+            <p class="card-title">MOTOR SPEED</p>
+            <p id="motor-speed" class="card-value">-- <span class="unit">RPM</span></p>
+          </div>
+          <div class="card small-card">
+            <p class="card-title">FLOW RATE</p>
+            <p id="flow-rate" class="card-value">-- <span class="unit">L/s</span></p>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">BUZZER STATUS</p>
+          <div id="buzzer" class="buzzer-status-safe">SAFE</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="SIH2.js"></script>
+</body>
+</html>
